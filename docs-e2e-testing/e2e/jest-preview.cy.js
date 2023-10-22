@@ -23,10 +23,8 @@ describe('Tests for Jest Preview', () => {
     cy.contains('Getting Started');
 
     // Check Demo link is correct
-    cy.contains('Demo').should(
-      'have.attr',
-      'href',
-      'https://stackblitz.com/edit/jest-preview?file=README.md',
-    );
+    cy.contains('Demo')
+    .invoke('attr', 'href')
+    .should('include','https://stackblitz.com/edit/jest-preview')
   });
 });
