@@ -1,3 +1,4 @@
+import Translate, { translate } from '@docusaurus/Translate';
 import React from 'react';
 import styles from './styles.module.css';
 
@@ -6,23 +7,57 @@ export default function Sponsors() {
     <div className={styles.wrapper}>
       <div className="row">
         <div className="col">
-          <h2 className={styles.sponsorsHeading}>Sponsors</h2>
+          <h2 className={styles.sponsorsHeading}>
+            {translate({ id: 'home.sponsors.heading', message: 'Sponsors' })}
+          </h2>
         </div>
       </div>
       <div className={styles.description}>
-        Support on{' '}
-        <a
-          href="https://opencollective.com/jest-preview"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Translate
+          id="home.sponsors.description"
+          values={{
+            openCollectiveLink: (
+              <a
+                href="https://opencollective.com/jest-preview"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Collective
+              </a>
+            ),
+            oneDollar: <strong>$1</strong>,
+          }}
         >
-          Open Collective
-        </a>
-        , starting from <b>$1</b>.
+          {'Support on {openCollectiveLink}, starting from {oneDollar}'}
+        </Translate>
       </div>
       <div className="row">
         <div className="col">
-          <h3 className={styles.bronzeHeading}>Bronze Sponsor 🥉</h3>
+          <h3 className={styles.bronzeHeading}>Bronze Sponsors 🥉</h3>
+        </div>
+      </div>
+      <div className={styles.sponsorWrapper}>
+        <a
+          className={styles.bronzeSponsor}
+          href="https://www.deploysentinel.com/"
+        >
+          <img
+            src="https://github.com/DeploySentinel.png"
+            width="94"
+            height="94"
+          />
+        </a>
+        <a className={styles.bronzeSponsor} href="https://react-hook-form.com/">
+          <img
+            src="https://github.com/react-hook-form.png"
+            width="94"
+            height="94"
+          />
+        </a>
+      </div>
+      <div className="row">
+        <div className="col">
+          <h3 className={styles.pastSponsorHeading}>Past Sponsors</h3>
         </div>
       </div>
       <div className={styles.sponsorWrapper}>
@@ -35,15 +70,24 @@ export default function Sponsors() {
         </a>
       </div>
       <div className={styles.wantLogo}>
-        Want your company logo appear here? Read more at{' '}
-        <a
-          href="https://github.com/nvh95/jest-preview#sponsors"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Translate
+          id="home.sponsors.want"
+          values={{
+            sponsorsLink: (
+              <a
+                href="https://github.com/nvh95/jest-preview#sponsors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Translate id="home.sponsors.want.sponsors-link">
+                  Sponsors
+                </Translate>
+              </a>
+            ),
+          }}
         >
-          Sponsors
-        </a>
-        .
+          {'Want your company logo appear here? Read more at {sponsorsLink}.'}
+        </Translate>
       </div>
     </div>
   );

@@ -7,20 +7,27 @@ import { styled as stichesStyled } from '@stitches/react';
 import '~animate.css/animate.css';
 
 import logo2 from './assets/images/logo.svg';
+import { ReactComponent as SvgVite } from './assets/images/vite.svg';
 import './App.css';
 import './assets/css/App.css';
 import './assets/_scss/style.scss';
 import { cssModule } from './style.module.css';
 import { scssModule } from './style.module.scss';
+import './styles/less/style.less';
 
 function App() {
   const [count, setCount] = useState(0);
   return (
     <div className="App">
       <header className="App-header">
-        <img src="/logo.svg" className="App-logo" alt="logo" />
+        <LogoWrapper>
+          <img src="/logo.svg" className="App-logo" alt="logo" height={100} />
+          <SvgVite height={100} />
+        </LogoWrapper>
         <img src={logo2} className="logo2" alt="logo2" />
         <p>Hello Vite + React!</p>
+        <p className="less-p">Less: Blue + Dynamic size (break point 400px)</p>
+        <p className="less-child-p">Less: Yellow</p>
         <p className={scssModule}>Styled by SCSS Modules</p>
         <StyledText>This text is styled by styled-components</StyledText>
         <p className="global-css">
@@ -41,7 +48,7 @@ function App() {
             font-size: 24px;
             border-radius: 4px;
             &:hover {
-              color: white;
+              color: blue;
             }
           `}
         >
@@ -100,6 +107,12 @@ function App() {
 
 const StyledText = styled.p`
   color: red;
+`;
+
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 500px;
 `;
 
 const EmotionP = emotionStyled.p`

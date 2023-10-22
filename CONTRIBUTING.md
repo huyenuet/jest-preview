@@ -14,9 +14,9 @@ We appreciated any help. There is not a thing as a small contribution. If you se
 - **Docs**: We have a documentation site at [www.jest-preview.com](https://www.jest-preview.com/docs/getting-started/intro), it's very easier to contribute to the documentation by using `Edit this page` button at the bottom of each page. If you see a typo, an unclear page or incorrect grammar, please send us a PR.
 - **Fix bugs**: We are tracking bugs at [Issues](https://github.com/nvh95/jest-preview/issues). Please [claim an issue](#claim-issues) then open a PR to fix a bug.
 - **Add new features**: Do you use Jest Preview for your projects and find out Jest Preview is missing a feature? Please open an issue to discuss it. And it's great if you can help to implement that feature.
-- **Answer questions and issues on GitHub and Discord**: [GitHub issues](https://github.com/nvh95/jest-preview/issues) and [Discord](https://discord.gg/X5PyPUfemh)
+- **Answer questions and issues on GitHub and Discord**: [GitHub issues](https://github.com/nvh95/jest-preview/issues) and [Discord](https://discord.gg/z4DRBmk7vx)
 
-If not sure what to contribute, but you still want to contribute something, let us know in [Discord](https://discord.gg/X5PyPUfemh) (channel #contributors)
+If not sure what to contribute, but you still want to contribute something, let us know in [Discord](https://discord.gg/z4DRBmk7vx) (channel #contributors)
 
 ## Claim issues
 
@@ -31,30 +31,30 @@ If you want to work on any of these issues, just drop a message such as "I'd lik
 
 Jest Preview repository has some npm scripts to help you develop efficiently.
 
-- `npm install`: install all dependencies
-- `npm run build:watch`: build `jest-preview` and rebuild it when changes are made
-- `npm run types`: emit types, usually only need to run only once
-- `npm run server`: start Jest Preview Server
-- `npm run test:dev`: run Jest at `/demo/__tests__/App.test.tsx` (you will work with this file most of the time)
+- `pnpm install`: install all dependencies
+- `pnpm run build:watch`: build `jest-preview` and rebuild it when changes are made
+- `pnpm run types`: emit types, usually only need to run only once
+- `pnpm run server`: start Jest Preview Server
+- `pnpm run test:dev`: run Jest at `/demo/__tests__/App.test.tsx` (you will work with this file most of the time)
 
 ## Run locally
 
 Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 Run the real demo app:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Run jest tests and Jest Preview server simultaneously:
 
 ```bash
-npm run test
+pnpm run test
 ```
 
 Open chrome at <http://localhost:3336> to see the preview
@@ -62,11 +62,21 @@ Open chrome at <http://localhost:3336> to see the preview
 However, it's recommended to run jest tests and Jest Preview server separately:
 
 ```bash
-npm run server # Run jest-preview server
-npm run test:dev # Run jest
+pnpm run server # Run jest-preview server
+pnpm run test:dev # Run jest
 ```
 
 Whenever `preview.debug()` is triggered, or whenever a test fails, you will see the changes reflected on the browser immediately.
+
+## Examples
+
+There are some examples to demonstrate how `jest-preview` can be used with popular frameworks at [examples](https://github.com/nvh95/jest-preview/tree/main/examples). Most of the packages have following npm scripts:
+
+- `jest-preview`: Start Jest Preview Server and open Jest Preview Dashboard
+- `test`/`test:watch`: Run test
+- `test:nc`: Run test without cache, useful when you use that example to develope/ debug an issue
+
+Before running any example, please help to temporary delete `tailwind.config.js` or `postcss.config.js` at `jest-preview`'s root. The reason is that example can read PostCSS/ TailwindCSS config and crash your test/ app. This is a workaround for this current setup and will be fixed when we migrate this repository to monorepo architecture.
 
 ## How jest-preview works
 
@@ -83,6 +93,10 @@ Following are brief descriptions of the repository architecture:
 - [dist](https://github.com/nvh95/jest-preview/tree/main/dist/): Distribution code, which is bundled and processed by Rollup (previously: Vite Library Mode).
 - [examples](https://github.com/nvh95/jest-preview/tree/main/examples/): contains examples of how to integrate Jest Preview with various libraries and frameworks.
 - [website](https://github.com/nvh95/jest-preview/tree/main/website/): contains code for [www.jest-preview.com](https://www.jest-preview.com/)
+
+## Translation Contributing
+
+- See [TRANSLATION.md](https://github.com/nvh95/jest-preview/tree/main/TRANSLATION.md)
 
 ## Submit a PR
 

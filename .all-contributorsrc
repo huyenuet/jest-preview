@@ -145,6 +145,163 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "huyenuet",
+      "name": "huyenuet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31855858?v=4",
+      "profile": "https://github.com/huyenuet",
+      "contributions": [
+        "test"
+      ]
+    },
+    {
+      "login": "bennettdams",
+      "name": "Bennett Dams",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29319414?v=4",
+      "profile": "https://github.com/bennettdams",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "srosato",
+      "name": "Steven Rosato",
+      "avatar_url": "https://avatars.githubusercontent.com/u/650192?v=4",
+      "profile": "http://majisti.com",
+      "contributions": [
+        "example",
+        "bug"
+      ]
+    },
+    {
+      "login": "nhducit",
+      "name": "nhducit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4246176?v=4",
+      "profile": "https://github.com/nhducit",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "benoitgrasset-alma",
+      "name": "Benoit GRASSET",
+      "avatar_url": "https://avatars.githubusercontent.com/u/104012464?v=4",
+      "profile": "https://github.com/benoitgrasset-alma",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "skirianov",
+      "name": "Sergii Kirianov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74229951?v=4",
+      "profile": "https://github.com/skirianov",
+      "contributions": [
+        "doc",
+        "content",
+        "code"
+      ]
+    },
+    {
+      "login": "iicdii",
+      "name": "Kim, Harim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4951716?v=4",
+      "profile": "https://harimkim.netlify.app/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "LayZeeDK",
+      "name": "Lars Gyrup Brink Nielsen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6364586?v=4",
+      "profile": "https://dev.to/layzee",
+      "contributions": [
+        "doc",
+        "example"
+      ]
+    },
+    {
+      "login": "MikeShi42",
+      "name": "Mike Shi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2781687?v=4",
+      "profile": "https://deploysentinel.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vkrol",
+      "name": "Veniamin Krol",
+      "avatar_url": "https://avatars.githubusercontent.com/u/153412?v=4",
+      "profile": "http://vkrol.dev",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "eltociear",
+      "name": "Ikko Ashimine",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22633385?v=4",
+      "profile": "https://bandism.net/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "SpadarShut",
+      "name": "Pavel Shut",
+      "avatar_url": "https://avatars.githubusercontent.com/u/738710?v=4",
+      "profile": "https://github.com/SpadarShut",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "davidhao3300",
+      "name": "David Z Hao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5534398?v=4",
+      "profile": "https://github.com/davidhao3300",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Rohitbels",
+      "name": "Rohitbels",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4401718?v=4",
+      "profile": "https://github.com/Rohitbels",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "vadhe",
+      "name": "Rivaldi Putra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36479850?v=4",
+      "profile": "https://vadhe.dev/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "KieraDOG",
+      "name": "Long Zhao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6457082?v=4",
+      "profile": "https://github.com/KieraDOG",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "jsun969",
+      "name": "Justin Sun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29330847?v=4",
+      "profile": "http://jsun969.cn",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -152,5 +309,6 @@
   "projectOwner": "nvh95",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }

@@ -1,5 +1,7 @@
+/** @type {import('@jest/types').Config.InitialOptions} */
+
 module.exports = {
-  roots: ['<rootDir>/demo'],
+  roots: ['<rootDir>/demo', '<rootDir>/src'],
   collectCoverageFrom: [
     'demo/**/*.{js,jsx,ts,tsx}',
     '!demo/**/*.d.ts',
@@ -12,13 +14,12 @@ module.exports = {
   modulePaths: ['<rootDir>/demo'],
   transform: {
     '^.+\\.(ts|js|tsx|jsx)$': '@swc/jest',
-    '^.+\\.(css|scss|sass)$': '<rootDir>/transforms/css',
+    '^.+\\.(css|scss|sass|less)$': '<rootDir>/transforms/css',
     '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|json)$)': '<rootDir>/transforms/file',
   },
   transformIgnorePatterns: [
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$',
   ],
-  modulePaths: ['<rootDir>/demo'],
   moduleNameMapper: {
     '^react-native$': 'react-native-web',
     // Support import ~

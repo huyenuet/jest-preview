@@ -1,3 +1,48 @@
+# 0.3.2
+
+## Fixes
+
+- Support run `jest-preview` on remote server
+
+# 0.3.1
+
+## Features
+
+- Inline `@import` statement
+- Support LESS
+
+# 0.3.0
+
+## Features
+
+- Support viewing SVG when importing as a component in React
+- Use PostCSS configure to transform CSS
+- Convert to `pnpm`
+
+## Chores
+
+- Convert cypress tests to typescript
+
+# 0.2.8
+
+## Fixes
+
+- Fix bug Jest Preview Dashboard does not reload on Linux systems.
+
+# 0.2.7
+
+## Chores
+
+- Write `index.html` to disk, instead of `body.html` and `head.html` separately
+- Merge `file` and `fileCRA` transformations
+
+# 0.2.6
+
+## Fixes
+
+- Support old version of Sass
+- Fix do not show image if use with `ts-jest`
+
 # 0.2.5
 
 ## Features

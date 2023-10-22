@@ -1,8 +1,10 @@
-# Use with Remix
+# Remix
 
 This example demonstrates how to use `jest-preview` with [`Remix`](https://remix.run/), bootstrapped using [`create-remix`](https://remix.run/docs/en/v1#getting-started) (without using any built-in templates/stacks).
 
 🚧 This example only demonstrates the simplest use of CSS in a Remix app (global stylesheet). Remix supports [many different ways of styling](https://remix.run/docs/en/v1/guides/styling). Example of more complex ways to style is coming.
+
+You can see the full example at <https://github.com/nvh95/jest-preview/tree/main/examples/remix>
 
 ## Install Jest
 
@@ -96,7 +98,7 @@ module.exports = {
     // Use @swc/jest to transpile tests
     // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
     '^.+\\.(js|jsx|ts|tsx)$': '@swc/jest',
-    '^.+\\.(css|scss|sass)$': 'jest-preview/transforms/css',
+    '^.+\\.(css|scss|sass|less)$': 'jest-preview/transforms/css',
     '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)':
       'jest-preview/transforms/file',
   },

@@ -1,8 +1,8 @@
-# Use with Next.js (with Babel transpiler)
+# Next.js with Babel compiler
 
 This example demonstrates how to use `jest-preview` with `Next.js`, bootstrapped using `create-next-app`.
 
-⚠️ This example is meant for Next.js apps using Babel to transpile (Next.js version 11 or below, or opt out of the Next.js compiler). If you are using the new [Next.js compiler](https://nextjs.org/docs/advanced-features/compiler) (also called Rust compiler), please see the [nextjs](/examples/nextjs) example.
+⚠️ This example is meant for Next.js apps using Babel to transpile (Next.js version 11 or below, or opt-out of the Next.js compiler). If you are using the new [Next.js compiler](https://nextjs.org/docs/advanced-features/compiler) (also called Rust compiler), please see the [nextjs](https://www.jest-preview.com/docs/examples/nextjs) example.
 
 🚧 Next.js's `<Image />` component isn't working with Jest Preview yet.
 
@@ -50,7 +50,7 @@ Enable Jest Preview inside `jest.config.js`. Note that the Jest config object re
       // Use babel-jest to transpile tests with the next/babel preset
       // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
       '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
-+     '^.+\\.(css|scss|sass)$': 'jest-preview/transforms/css',
++     '^.+\\.(css|scss|sass|less)$': 'jest-preview/transforms/css',
 +     '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': 'jest-preview/transforms/file',
     },
     transformIgnorePatterns: [

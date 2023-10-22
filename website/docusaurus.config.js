@@ -4,6 +4,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const isChineseDocs = process.env.CHINESE_DOCS === '1';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Jest Preview',
@@ -29,6 +31,8 @@ const config = {
         blog: {
           showReadingTime: true,
           editUrl: 'https://github.com/nvh95/jest-preview/edit/main/website/',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
         },
         // api: {
         //   showReadingTime: true,
@@ -66,21 +70,55 @@ const config = {
           { to: '/blog', label: 'Blog', position: 'left' },
           { to: '/docs/api/debug', label: 'API', position: 'left' },
           {
-            href: 'https://stackblitz.com/edit/jest-preview?file=README.md',
+            href: 'https://stackblitz.com/edit/jest-preview?file=src%2FApp.test.tsx,README.md',
             label: 'Demo',
             position: 'left',
           },
           // TODO: To add as a blog
           // { to: '/contributors', label: 'Contributors', position: 'left' },
           {
+            href: 'https://forms.gle/PJFH5oEzi7gsb7Ac6',
+            label: 'Feedback',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/nvh95/jest-preview',
             label: 'GitHub',
             position: 'right',
           },
           {
-            href: 'https://discord.gg/X5PyPUfemh',
+            href: 'https://www.npmjs.com/package/jest-preview',
+            label: 'npm',
+            position: 'right',
+          },
+          {
+            href: 'https://discord.gg/z4DRBmk7vx',
             label: 'Discord',
             position: 'right',
+          },
+          {
+            type: 'dropdown',
+            label: '🌎 Languages',
+
+            position: 'right',
+            items: [
+              {
+                label: 'English',
+                href: 'https://www.jest-preview.com/',
+              },
+              {
+                label: '简体中文',
+                href: 'https://cn.jest-preview.com/',
+              },
+              {
+                type: 'html',
+                value: '<hr style="margin: 0.3rem 0;">',
+              },
+              {
+                href: 'https://github.com/nvh95/jest-preview/tree/main/TRANSLATION.md',
+                label: 'Help Us Translate',
+              },
+            ],
           },
         ],
       },
@@ -93,6 +131,10 @@ const config = {
               {
                 label: 'Tutorial',
                 to: '/docs/getting-started/intro',
+              },
+              {
+                label: 'Blog',
+                to: '/blog',
               },
             ],
           },
@@ -109,7 +151,15 @@ const config = {
               // },
               {
                 label: 'Twitter',
+                href: 'https://twitter.com/JestPreview',
+              },
+              {
+                label: `Hung's Twitter`,
                 href: 'https://twitter.com/hung_dev',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/z4DRBmk7vx',
               },
             ],
           },
@@ -117,16 +167,12 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
                 href: 'https://github.com/nvh95/jest-preview',
               },
+
               {
-                label: 'Discord',
-                href: 'https://discord.gg/X5PyPUfemh',
+                html: `<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify" /> </a>`,
               },
             ],
           },
@@ -144,6 +190,10 @@ const config = {
         indexName: 'jest-preview',
       },
     }),
+  i18n: {
+    defaultLocale: isChineseDocs ? 'zh-CN' : 'en',
+    locales: ['en', 'zh-CN'],
+  },
 };
 
 module.exports = config;

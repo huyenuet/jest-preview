@@ -1,3 +1,5 @@
+/** @type {import('@jest/types').Config.InitialOptions} */
+
 module.exports = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
@@ -14,9 +16,9 @@ module.exports = {
     '^.+\\.(js|jsx|mjs|cjs|ts|tsx)$':
       'react-scripts/config/jest/babelTransform.js',
     // Update the regex to support css and sass
-    '^.+\\.(css|scss|sass)$': 'jest-preview/transforms/css',
+    '^.+\\.(css|scss|sass|less)$': 'jest-preview/transforms/css',
     '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)':
-      'jest-preview/transforms/fileCRA',
+      'jest-preview/transforms/file',
   },
   transformIgnorePatterns: [
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$',

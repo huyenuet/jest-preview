@@ -9,6 +9,8 @@ image: /img/first-class-support-cra.jpg
 CRA is well known for bootstrapping a React App. It hides the complexity of bundling and configuration over `react-scripts`. However, in some scenarios, it's very hard to customize CRA for a specific purpose. Make Jest Preview works seamlessly with CRA is an example.
 Currently, there is no way to customize CRA's `jest.config.js` file easily. So, Jest Preview bundles a few CLIs to make integrating Jest Preview to CRA effortless. We hope with this built-in helper CLI, CRA users can adopt Jest Preview easier.
 
+<!--truncate-->
+
 **Option 1 (Recommended): Use built-in codemod CLI:**
 
 - You just need to run the following command at the root of your CRA project:
@@ -31,6 +33,8 @@ Option 2: Configure manually
   <summary>Click to expand!</summary>
 
 ```js
+/** @type {import('@jest/types').Config.InitialOptions} */
+
 module.exports = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
@@ -44,9 +48,9 @@ module.exports = {
   transform: {
     '^.+\\.(js|jsx|mjs|cjs|ts|tsx)$':
       'react-scripts/config/jest/babelTransform.js',
-    '^.+\\.(css|scss|sass)$': 'jest-preview/transforms/css',
+    '^.+\\.(css|scss|sass|less)$': 'jest-preview/transforms/css',
     '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)':
-      'jest-preview/transforms/fileCRA',
+      'jest-preview/transforms/file',
   },
   transformIgnorePatterns: [
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$',

@@ -1,3 +1,5 @@
+/** @type {import('@jest/types').Config.InitialOptions} */
+
 module.exports = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: [
@@ -11,7 +13,7 @@ module.exports = {
   modulePaths: ['<rootDir>/src'],
   transform: {
     '^.+\\.(ts|js|tsx|jsx)$': '@swc/jest',
-    '^.+\\.(css|scss|sass)$': 'jest-preview/transforms/css',
+    '^.+\\.(css|scss|sass|less)$': 'jest-preview/transforms/css',
     '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)':
       'jest-preview/transforms/file',
   },
