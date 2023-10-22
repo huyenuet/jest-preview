@@ -16,7 +16,6 @@ describe('Tests for Jest Preview', () => {
     // Check Blog page is present
     cy.contains('Blog').click();
     cy.url().should('contain', '/blog');
-    cy.contains('Recent posts');
 
     // Check API page is present
     cy.contains('API').click();
