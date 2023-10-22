@@ -4,7 +4,7 @@ describe('Tests for Jest Preview', () => {
     cy.contains('h1', 'Jest Preview');
 
     // Check CTA Get Started should direct users to Docs page
-    cy.get('.button').click();
+    cy.get('.button--secondary').click();
     cy.url().should('contain', 'docs/getting-started/intro');
     cy.contains('h1', 'Introduction');
 
